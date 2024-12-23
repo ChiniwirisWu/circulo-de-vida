@@ -7,17 +7,17 @@ import { useState } from 'react';
 
 export default function App() {
   const [ domains, setDomains ] = useState({
-    family: 0,
-    friends: 0,
-    studies: 0,
-    health: 0,
-    love: 0,
-    image: 0,
-    leasure: 0,
-    emotions: 0,
-    initiative: 0,
-    motivation: 0,
-    spirituality: 0
+    family: {value: 0, color: "#ebb134"},
+    friends: {value: 0, color: "#eb3d34"},
+    studies: {value: 0, color: "#34ebd5"},
+    health: {value: 0, color: "#52eb34"},
+    love: {value: 0, color: "#f27ec8"},
+    image: {value: 0, color: "#cd7ef2"},
+    leasure: {value: 0, color: "#f2cd7e"},
+    emotions: {value: 0, color: "#59554d"},
+    initiative: {value: 0, color: "#ff6b84"},
+    motivation: {value: 0, color: "#000ac9"},
+    spirituality: {value: 0, color: "#80edb8"}
   });
   const [ ideas, setIdeas ] = useState([
     {title: 'talk more with my frieds', domain: 'friends', vote: 4},
