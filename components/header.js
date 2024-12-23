@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export default function Header({domain, page=2}){
+export default function Header({domain, page=1}){
   return (
     <View style={styles.container}>
       <ButtonIcon iconName={(page == 1)? "switch-right" : "switch-left"} />
