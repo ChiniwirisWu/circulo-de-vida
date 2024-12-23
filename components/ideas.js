@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    flexWrap: 'nowrap'
   },
 })
 
@@ -22,11 +23,12 @@ function TitleAndButton({title, iconName}){
 }
 
 function IdeaItem({title, handler, vote}){
+  if(title.length > 25) title = title.substring(0, 26) + '...';
   return (
     <View style={[styles.titleAndButtonContainer, {marginBottom: 10}]}>
-      <Title text={title} />
+      <Text style={{fontWeight: 600}}>{title}</Text>
       <View style={styles.titleAndButtonContainer}>
-        <Text>{vote}/5</Text>
+        <Text>{vote}/10</Text>
         <ButtonIcon iconName={"info"} />
       </View>
     </View>
