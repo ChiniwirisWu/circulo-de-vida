@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { ScrollView } from 'react-native';
 import { StyleSheet, Text, View, Modal } from 'react-native';
 import Header from './components/header';
 import Graph from './components/graph';
@@ -12,7 +13,7 @@ export default function App() {
     {value: 2, color: "#eb3d34", name: 'friends'},
     {value: 4, color: "#34ebd5", name: 'studies'},
     {value: 6, color: "#52eb34", name: 'health'},
-    {value: 1, color: "#f27ec8", name: 'love'},
+    {value: 3, color: "#f27ec8", name: 'love'},
     {value: 2, color: "#cd7ef2", name: 'image'},
     {value: 4, color: "#f2cd7e", name: 'leasure'},
     {value: 2, color: "#59554d", name: 'emotions'},
@@ -33,12 +34,12 @@ export default function App() {
   ]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header />
       <Graph domains={domains} />
-      <Content ideas={ideas} />
+      <Content ideas={ideas} domains={domains} />
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 

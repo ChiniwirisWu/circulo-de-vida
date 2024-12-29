@@ -2,8 +2,8 @@ import { View, StyleSheet, Text, FlatList } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1.2,
-    marginHorizontal: 'auto'
+    marginHorizontal: 'auto',
+    marginBottom: 20
   },
   graphContainer: {
     marginHorizontal: 'auto',
@@ -47,13 +47,13 @@ function createColorMap(domains){
   return resultArray;
 }
 
-function GraphDraw({domains}){
+function GraphDraw({domains}) {
   const data = createColorMap(domains);
   return (
     <View style={styles.graphContainer}>
       <FlatList
         data={data}
-        renderItem={({item, index})=> (
+        renderItem={({item, index}) => (
           <>
             <Text style={{fontSize: 10, fontWeight: 800}}>{item.name}</Text>
             <FlatList

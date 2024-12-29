@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 import Ideas from "./ideas";
+import Valuation from "./valuation";
 
 const styles = {
   container: {
-    flex: 1,
     //borderWidth: 1
     backgroundColor: '#eee',
     backgroundColor: "#aebfb4",
@@ -12,8 +12,8 @@ const styles = {
   }
 }
 
-export default function Content({ page=1, domains, ideas }){
-    let content = (page == 1) ? <Ideas content={ideas} /> : <Text>Valuation</Text>
+export default function Content({ page=2, domains, ideas }){
+  let content = (page == 1) ? <Ideas content={ideas} /> : <Valuation domains={domains} /> 
     return (
       <View style={styles.container}>
         {content}

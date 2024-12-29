@@ -28,7 +28,7 @@ function IdeaItem({title, handler, vote}){
     <View style={[styles.titleAndButtonContainer, {marginBottom: 10}]}>
       <Text style={{fontWeight: 600}}>{title}</Text>
       <View style={styles.titleAndButtonContainer}>
-        <Text>{vote}/10</Text>
+        <Text style={{fontSize:10, fontWeight: 700}}>{vote}/10</Text>
         <ButtonIcon iconName={"info"} />
       </View>
     </View>
