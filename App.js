@@ -5,20 +5,21 @@ import Graph from './components/graph';
 import Content from './components/content';
 import { useState } from 'react';
 
+
 export default function App() {
-  const [ domains, setDomains ] = useState({
-    family: {value: 0, color: "#ebb134"},
-    friends: {value: 0, color: "#eb3d34"},
-    studies: {value: 0, color: "#34ebd5"},
-    health: {value: 0, color: "#52eb34"},
-    love: {value: 0, color: "#f27ec8"},
-    image: {value: 0, color: "#cd7ef2"},
-    leasure: {value: 0, color: "#f2cd7e"},
-    emotions: {value: 0, color: "#59554d"},
-    initiative: {value: 0, color: "#ff6b84"},
-    motivation: {value: 0, color: "#000ac9"},
-    spirituality: {value: 0, color: "#80edb8"}
-  });
+  const [ domains, setDomains ] = useState([
+    {value: 3, color: "#ebb134", name: 'family'},
+    {value: 2, color: "#eb3d34", name: 'friends'},
+    {value: 4, color: "#34ebd5", name: 'studies'},
+    {value: 6, color: "#52eb34", name: 'health'},
+    {value: 1, color: "#f27ec8", name: 'love'},
+    {value: 2, color: "#cd7ef2", name: 'image'},
+    {value: 4, color: "#f2cd7e", name: 'leasure'},
+    {value: 2, color: "#59554d", name: 'emotions'},
+    {value: 4, color: "#ff6b84", name: 'initiative'},
+    {value: 3, color: "#000ac9", name: 'motivation'},
+    {value: 5, color: "#80edb8", name: 'spirituality'}
+  ]);
   const [ ideas, setIdeas ] = useState([
     {title: 'talk more with my frieds', domain: 'friends', vote: 4},
     {title: 'hang out once in a week', domain: 'friends', vote: 4},
@@ -34,7 +35,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header />
-      <Graph />
+      <Graph domains={domains} />
       <Content ideas={ideas} />
       <StatusBar style="auto" />
     </View>
@@ -43,6 +44,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#bacfc1",
     flex: 1,
     paddingHorizontal: 50,
     paddingVertical: 20

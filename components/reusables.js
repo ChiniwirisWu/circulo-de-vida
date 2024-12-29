@@ -10,7 +10,7 @@ export function ButtonIcon({ hasBackground=false, iconName=null }){
 }
 
 export function ButtonText({text}){
-  return <Pressable style={{paddingHorizontal: 5, paddingVertical: 5, borderWidth: 1, borderRadius: 5}}><Text>{text}</Text></Pressable>
+  return <Pressable style={{paddingHorizontal: 5, paddingVertical: 5, borderWidth: 1, borderRadius: 5, backgroundColor: "#fff"}}><Text>{text}</Text></Pressable>
 }
 
 export function Title({ text="Titulo" }){

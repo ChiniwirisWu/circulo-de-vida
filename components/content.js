@@ -4,7 +4,11 @@ import Ideas from "./ideas";
 const styles = {
   container: {
     flex: 1,
-    borderWidth: 1
+    //borderWidth: 1
+    backgroundColor: '#eee',
+    backgroundColor: "#aebfb4",
+    paddingHorizontal: 10,
+    paddingVertical: 10
   }
 }
 
