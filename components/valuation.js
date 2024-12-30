@@ -1,34 +1,11 @@
 import { TextInput, Text, View, StyleSheet, FlatList } from "react-native";
-import { ButtonText } from "./reusables";
+import { ButtonText, Field } from "./reusables";
 import { Formik } from "formik";
 
-const styles = StyleSheet.create({
-  container: {
-  },
-  label: {
-    fontWeight: 700,
-    marginBottom: 3
-  },
-  textInput: {
-    borderWidth: .5,
-    paddingHorizontal: 5,
-    paddingVertical: 3,
-  }
-})
-
-function Field({name, value, onChange}){
-  return (
-    <>
-      <Text style={styles.label}>{name}</Text>
-      <TextInput style={[styles.textInput, {backgroundColor: "#eee"}]} onChangeText={onChange} value={value} />
-    </>
-  )
-}
 
 export default function Valuation({domains}){
-  console.log(domains)
   return (
-    <View style={styles.container}>
+    <View>
       <Formik 
         initialValues={{
           family: domains[0].value,

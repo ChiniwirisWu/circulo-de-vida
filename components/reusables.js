@@ -1,4 +1,4 @@
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, TextInput } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons"
 
 export function ButtonIcon({ hasBackground=false, iconName=null }){
@@ -14,5 +14,14 @@ export function ButtonText({text, onPress}){
 }
 
 export function Title({ text="Titulo" }){
-  return <Text style={{fontSize:20, fontWeight: 600}}>{text}</Text>;
+  return <Text style={{fontSize:20, fontWeight: 600, marginBottom: 5 }}>{text}</Text>;
+}
+
+export function Field({name, value, onChange}){
+  return (
+    <>
+      <Text style={{ fontWeight: 700,marginBottom: 3}}>{name}</Text>
+      <TextInput style={{backgroundColor: "#eee", borderWidth: .5, paddingHorizontal: 5, paddingVertical: 3,}} onChangeText={onChange} value={value} />
+    </>
+  )
 }

@@ -4,7 +4,6 @@ import Valuation from "./valuation";
 
 const styles = {
   container: {
-    //borderWidth: 1
     backgroundColor: '#eee',
     backgroundColor: "#aebfb4",
     paddingHorizontal: 10,
@@ -12,7 +11,7 @@ const styles = {
   }
 }
 
-export default function Content({ page=2, domains, ideas }){
+export default function Content({ page=1, domains, ideas }){
   let content = (page == 1) ? <Ideas content={ideas} /> : <Valuation domains={domains} /> 
     return (
       <View style={styles.container}>

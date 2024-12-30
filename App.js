@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import { StyleSheet, Text, View, Modal } from 'react-native';
 import Header from './components/header';
 import Graph from './components/graph';
+import Add from './components/add';
 import Content from './components/content';
 import { useState } from 'react';
 
@@ -38,6 +39,7 @@ export default function App() {
       <Header />
       <Graph domains={domains} />
       <Content ideas={ideas} domains={domains} />
+      <Add />
       <StatusBar style="auto" />
     </ScrollView>
   );
